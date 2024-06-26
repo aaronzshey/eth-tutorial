@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
 
-contract MyToken is ERC721, Ownable, EIP712, ERC721Votes {
+contract MyNFT is ERC721, Ownable, EIP712, ERC721Votes {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
