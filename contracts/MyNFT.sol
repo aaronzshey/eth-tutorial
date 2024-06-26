@@ -11,9 +11,9 @@ contract MyToken is ERC721, Ownable, EIP712, ERC721Votes {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("MyToken", "MTK")
+        ERC721("MyNFT", "MyNFT")
         Ownable(initialOwner)
-        EIP712("MyToken", "1")
+        EIP712("MyNFT", "1")
     {}
 
     function safeMint(address to) public onlyOwner {
