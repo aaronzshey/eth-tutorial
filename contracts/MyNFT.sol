@@ -11,7 +11,7 @@ contract MyNFT is ERC721, Ownable, EIP712, ERC721Votes {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("MyNFT", "MyNFT")
+        ERC721("MyNFT", "NFT")
         Ownable(initialOwner)
         EIP712("MyNFT", "1")
     {}
