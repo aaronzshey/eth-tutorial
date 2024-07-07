@@ -20,8 +20,9 @@ async function main() {
   //needs interface (abi) and bytecode
   //https://docs.ethers.org/v5/api/contract/contract-factory/#ContractFactory--creating
   const MyNFT = new ethers.ContractFactory(contract.default.abi, contract.default.bytecode, signer);
+  //console.log(contract.default.abi.filter(x => x.name == "safeMint"));
 
-  /* Start deployment, returning a promise that resolves to a contract object */
+  //Start deployment, returning a promise that resolves to a contract object
   const myNFT = await MyNFT.deploy(
     "0x06b0ED5338e36623b859081B0692F7dE33aF67E5",
   );
@@ -33,6 +34,7 @@ async function main() {
   //Contract deployed to address: 0xA5CE67961DB1bEe988959C0D0F56115fA4ab8319
   //rewritten with ethers: contract deployed to address 0x40035C952Da77097872FA804F1dDB1c75CCb21b8
   //testing again: contract deployed to  0xB2fF31A12C234715502efDbA16C4Ada61270c9da
+  //this time should work: contract deployed to 0xe49A13ad27c56034cAbB825d6385f332A24e7065
 }
 
 main()

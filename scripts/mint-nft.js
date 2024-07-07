@@ -15,8 +15,8 @@ const abi = contract.default.abi;
 //to mint, we need a contract address from deploy.js
 const myNFTContract = new ethers.Contract(CONTRACT_ADDRESS, abi, signer);
 
-//pinata link:  "https://gateway.pinata.cloud/ipfs/QmSe4KMWG3MGuNdFXDEfJYSMpbfQq5Raxv63DQrKV3JXJF";
-const tokenURI = "ipfs://QmQExDx5HpiHymDVNbDT7GCL7cWmLGDaMreZzSM3n7B1R9"
+//const tokenURI = "https://gateway.pinata.cloud/ipfs/QmSe4KMWG3MGuNdFXDEfJYSMpbfQq5Raxv63DQrKV3JXJF";
+const tokenURI = "ipfs://QmSe4KMWG3MGuNdFXDEfJYSMpbfQq5Raxv63DQrKV3JXJF"
 //myNFTContract.interface.fragments.filter(x => x.name == "safeMint").forEach(x => console.log(x.inputs));
 
 
