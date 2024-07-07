@@ -13,13 +13,16 @@ Hardhat will be for compiling and testing.  That way, we don't need @nomiclabs/h
 import * as contract from "../artifacts/contracts/MyNFT.sol/MyNFT.json" with { type: "json" };
 
 async function main() {
-
   const provider = new ethers.AlchemyProvider("sepolia", API_KEY);
   const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 
   //needs interface (abi) and bytecode
   //https://docs.ethers.org/v5/api/contract/contract-factory/#ContractFactory--creating
-  const MyNFT = new ethers.ContractFactory(contract.default.abi, contract.default.bytecode, signer);
+  const MyNFT = new ethers.ContractFactory(
+    contract.default.abi,
+    contract.default.bytecode,
+    signer,
+  );
   //console.log(contract.default.abi.filter(x => x.name == "safeMint"));
 
   //Start deployment, returning a promise that resolves to a contract object
